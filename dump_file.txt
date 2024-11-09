@@ -1,0 +1,43 @@
+digraph G{
+    rankdir = LR;
+    splines = ortho;
+    node[color = "#000000", fontsize = 10];
+    edge[color = "#000000", fontsize = 5];
+    subgraph list {
+    node[style = filled, color = white, fontsize = 10];
+    edge[color = "#000000", fontsize = 5];
+    style = "dashed";
+0 [shape = Mrecord, style = filled, fillcolor = "#e8bf1a", color = "#ffef33", label = " IP: 0 | DATA: 0 | NEXT: 1 | PREV: 2 "];
+1 [shape = Mrecord, style = filled, fillcolor = "#94e34f", color = "#000000", label = " IP: 1 | DATA: 5 | NEXT: 2 | PREV: 0 "];
+2 [shape = Mrecord, style = filled, fillcolor = "#94e34f", color = "#000000", label = " IP: 2 | DATA: 6 | NEXT: 0 | PREV: 1 "];
+3 [shape = Mrecord, style = filled, fillcolor = "#e34f4f", color = "#ff8333", label = " IP: 3 | DATA: -666 | NEXT: 4 | PREV: 0 "];
+4 [shape = Mrecord, style = filled, fillcolor = "#e34f4f", color = "#ff8333", label = " IP: 4 | DATA: -666 | NEXT: 5 | PREV: 3 "];
+5 [shape = Mrecord, style = filled, fillcolor = "#e34f4f", color = "#ff8333", label = " IP: 5 | DATA: -666 | NEXT: 6 | PREV: 4 "];
+6 [shape = Mrecord, style = filled, fillcolor = "#e34f4f", color = "#ff8333", label = " IP: 6 | DATA: -666 | NEXT: 7 | PREV: 5 "];
+7 [shape = Mrecord, style = filled, fillcolor = "#e34f4f", color = "#ff8333", label = " IP: 7 | DATA: -666 | NEXT: 8 | PREV: 6 "];
+8 [shape = Mrecord, style = filled, fillcolor = "#e34f4f", color = "#ff8333", label = " IP: 8 | DATA: -666 | NEXT: 9 | PREV: 7 "];
+9 [shape = Mrecord, style = filled, fillcolor = "#e34f4f", color = "#ff8333", label = " IP: 9 | DATA: -666 | NEXT: 0 | PREV: 8 "];
+0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 [weight = 10000, color = "#ffffff"];
+0 -> 1 [constraint = false, color = "#000000", weight = 0]
+0 -> 2 [constraint = false, color = "#000000", weight = 0]
+1 -> 2 [constraint = false, color = "#000000", weight = 0]
+1 -> 0 [constraint = false, color = "#000000", weight = 0]
+2 -> 0 [constraint = false, color = "#000000", weight = 0]
+2 -> 1 [constraint = false, color = "#000000", weight = 0]
+3 -> 4 [constraint = false, color = "#000000", weight = 0]
+3 -> 0 [constraint = false, color = "#000000", weight = 0]
+4 -> 5 [constraint = false, color = "#000000", weight = 0]
+4 -> 3 [constraint = false, color = "#000000", weight = 0]
+5 -> 6 [constraint = false, color = "#000000", weight = 0]
+5 -> 4 [constraint = false, color = "#000000", weight = 0]
+6 -> 7 [constraint = false, color = "#000000", weight = 0]
+6 -> 5 [constraint = false, color = "#000000", weight = 0]
+7 -> 8 [constraint = false, color = "#000000", weight = 0]
+7 -> 6 [constraint = false, color = "#000000", weight = 0]
+8 -> 9 [constraint = false, color = "#000000", weight = 0]
+8 -> 7 [constraint = false, color = "#000000", weight = 0]
+9 -> 0 [constraint = false, color = "#000000", weight = 0]
+9 -> 8 [constraint = false, color = "#000000", weight = 0]
+}
+Info[shape = note, style = "filled", fillcolor = "#FFD100" label = " HEADER | Head: 1 | Tail: 2 | Free: 3 "];
+}

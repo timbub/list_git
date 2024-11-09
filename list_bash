@@ -1,0 +1,4 @@
+#!/bin/bash
+g++ -c list.cpp  list_func.cpp list_dump.cpp
+g++ list.o list_dump.o list_func.o -o compil
+./compil
