@@ -1,5 +1,4 @@
 #include "list_func.h"
-#include "list_dump.h"
 
 void list_ctor(struct info_list* lst)
 {

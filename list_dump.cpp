@@ -1,5 +1,4 @@
 #include "list_dump.h"
-#include "list_func.h"
 
 void dump_in_file(struct info_list* lst)
 {
